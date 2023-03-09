@@ -16,9 +16,17 @@ TEST(kvadratTest, correctness) {
     double x1,x2;
     x1 = x2 = 0;
     kvadrat(1,3,-4,&x1,&x2);
-    ASSERT_EQ(x1+x2, -3);
+    if(x1 == -4 && x2 == 1 || x1 == 1 && x2 == -4)
+        SUCCEED();
+    else {
+        FAIL();
+    }
     kvadrat(1,-4,4,&x1,&x2);
-    ASSERT_EQ(x1-x2, 0);
+    if(x1 == 2 && x2 == 2)
+        SUCCEED();
+    else {
+        FAIL();
+    }
     ASSERT_EQ(kvadrat(1,-5,9,&x1,&x2), 1);
 }
 
@@ -27,6 +35,23 @@ TEST(kvadratTest, num0) {
     ASSERT_EQ(kvadrat(0,0,0,&x1,&x2), 3);
     ASSERT_EQ(kvadrat(0,0,1,&x1,&x2), 1);
     ASSERT_EQ(kvadrat(0,1,0,&x1,&x2), 2);
+    if(x1 == 0 && x2 == 0)
+        SUCCEED();
     ASSERT_EQ(kvadrat(1,0,0,&x1,&x2), 2);
+    if(x1 == 0 && x2 == 0)
+        SUCCEED();
 }
+
+TEST(kvadratTest, rational) {
+    double x1,x2;
+    if(kvadrat(2,4,-3,&x1,&x2) == 0)
+    {
+        ASSERT_NEAR(x1,0.58,0.01);
+        ASSERT_NEAR(x2,-2.58,0.01);
+    }
+    else {
+        FAIL();
+    }
+}
+
 #endif // KVADRAT_H

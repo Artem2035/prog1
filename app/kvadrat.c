@@ -31,8 +31,8 @@ int kvadrat(double a,double b, double c,double* res1,double* res2)
         else
         {
             double x1,x2;
-            x1 = (-b+sqrt(d))/2*a;
-            x2 = (-b-sqrt(d))/2*a;
+            x1 = (-b+sqrt(d))/(2*a);
+            x2 = (-b-sqrt(d))/(2*a);
             *res1 = x1;
             *res2 = x2;
             return 0;
