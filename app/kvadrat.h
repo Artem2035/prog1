@@ -1,6 +1,6 @@
-#ifndef KVADRAT
-#define KVADRAT
+#ifndef KVADRAT_FUNC
+#define KVADRAT_FUNC
 
-void kvadrat(double a,double b, double c);
+int kvadrat(double a,double b, double c,double* res1,double* res2);
 
 #endif // MYFUNC_H
