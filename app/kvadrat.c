@@ -4,6 +4,12 @@
 #include "kvadrat.h"
 
 //функция решения квадратного уравнения
+//возаращаемое значение
+//0 - 2 корня
+//1 - нет решения
+//2 - 1 корень
+//3 - бесконечно много решении
+
 int kvadrat(double a,double b, double c,double* res1,double* res2)
 {
     if(a == b && b == c && c == 0)
@@ -15,7 +21,6 @@ int kvadrat(double a,double b, double c,double* res1,double* res2)
         *res1 = *res2 = 0;
         return 2;
     }
-
 
     double d = 0;
     d = b*b-4*a*c;

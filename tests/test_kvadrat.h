@@ -11,35 +11,45 @@ extern "C" {
 #include "kvadrat.h"
 }
 
-TEST(kvadratTest, correctness) {
+TEST(kvadratTest, tworoots) {
 
     double x1,x2;
     x1 = x2 = 0;
-    kvadrat(1,3,-4,&x1,&x2);
-    if(x1 == -4 && x2 == 1 || x1 == 1 && x2 == -4)
-        SUCCEED();
-    else {
+    if(kvadrat(1,3,-4,&x1,&x2) == 0){
+        if((x1 == -4 && x2 == 1) || (x1 == 1 && x2 == -4))
+            SUCCEED();
+        else {
+            FAIL();
+        }
+    }
+    else{
         FAIL();
     }
-    kvadrat(1,-4,4,&x1,&x2);
-    if(x1 == 2 && x2 == 2)
-        SUCCEED();
-    else {
-        FAIL();
-    }
-    ASSERT_EQ(kvadrat(1,-5,9,&x1,&x2), 1);
+
 }
 
-TEST(kvadratTest, num0) {
+TEST(kvadratTest, oneroot)
+{
     double x1,x2;
-    ASSERT_EQ(kvadrat(0,0,0,&x1,&x2), 3);
-    ASSERT_EQ(kvadrat(0,0,1,&x1,&x2), 1);
-    ASSERT_EQ(kvadrat(0,1,0,&x1,&x2), 2);
-    if(x1 == 0 && x2 == 0)
-        SUCCEED();
-    ASSERT_EQ(kvadrat(1,0,0,&x1,&x2), 2);
-    if(x1 == 0 && x2 == 0)
-        SUCCEED();
+    x1 = x2 = 0;
+    if(kvadrat(1,-4,4,&x1,&x2) == 2)
+    {
+        if(x1 == 2 && x2 == 2)
+            SUCCEED();
+        else {
+            FAIL();
+        }
+    }
+    else{
+        FAIL();
+    }
+}
+
+TEST(kvadratTest, noroot)
+{
+    double x1,x2;
+    x1 = x2 = 0;
+    ASSERT_EQ(kvadrat(1,-5,9,&x1,&x2), 1);
 }
 
 TEST(kvadratTest, rational) {
@@ -54,4 +64,15 @@ TEST(kvadratTest, rational) {
     }
 }
 
+TEST(kvadratTest, num0) {
+    double x1,x2;
+    ASSERT_EQ(kvadrat(0,0,0,&x1,&x2), 3);
+    ASSERT_EQ(kvadrat(0,0,1,&x1,&x2), 1);
+    ASSERT_EQ(kvadrat(0,1,0,&x1,&x2), 2);
+    if(x1 == 0 && x2 == 0)
+        SUCCEED();
+    ASSERT_EQ(kvadrat(1,0,0,&x1,&x2), 2);
+    if(x1 == 0 && x2 == 0)
+        SUCCEED();
+}
 #endif // KVADRAT_H
