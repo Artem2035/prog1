@@ -1,4 +1,4 @@
-[![CI/CD GitHub Actions](https://github.com/seekerk/gtest/actions/workflows/test-action.yml/badge.svg)](https://github.com/seekerk/gtest/actions/workflows/test-action.yml)
+[![CI/CD GitHub Actions](https://github.com/Artem2035/prog1/actions/workflows/test-action.yml/badge.svg)](https://github.com/Artem2035/prog1/actions/workflows/test-action.yml)
 [![Coverage Status](https://coveralls.io/repos/github/Artem2035/prog1/badge.svg)](https://coveralls.io/github/Artem2035/prog1)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=seekerk_gtest&metric=alert_status)](https://sonarcloud.io/dashboard?id=seekerk_gtest)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=seekerk_ctest&metric=bugs)](https://sonarcloud.io/summary/new_code?id=seekerk_ctest)
