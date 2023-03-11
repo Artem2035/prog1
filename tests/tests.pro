@@ -19,7 +19,7 @@ DEFINES += INPUTDIR=\\\"$$PWD/input/\\\"
 HEADERS +=     tst_test1.h \
     ../app/myfunc.h \
     ../app/kvadrat.h \
-    ../tests/fibonachi_test.h \
+    fibonachi_test.h \
     test_kvadrat.h \
     tst_stdout.h
 
