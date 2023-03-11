@@ -1,8 +1,8 @@
 [![CI/CD GitHub Actions](https://github.com/Artem2035/prog1/actions/workflows/test-action.yml/badge.svg)](https://github.com/Artem2035/prog1/actions/workflows/test-action.yml)
 [![Coverage Status](https://coveralls.io/repos/github/Artem2035/prog1/badge.svg)](https://coveralls.io/github/Artem2035/prog1)
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=seekerk_gtest&metric=alert_status)](https://sonarcloud.io/dashboard?id=seekerk_gtest)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=seekerk_ctest&metric=bugs)](https://sonarcloud.io/summary/new_code?id=seekerk_ctest)
-[![Code smells](https://sonarcloud.io/api/project_badges/measure?project=seekerk_gtest&metric=code_smells)](https://sonarcloud.io/dashboard?id=seekerk_gtest)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Artem2035_prog1&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Artem2035_prog1)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Artem2035_prog1&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Artem2035_prog1)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Artem2035_prog1&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Artem2035_prog1)
 
 # Пример работы связки Qt + Google Test (gtest) + QtCreator
 
